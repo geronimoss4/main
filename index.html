@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background-color: black;
+            padding: 18px 0;
+        }
+        .navbar-list{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-list li{
+            margin: 0 15px;
+        }
+        .navbar-list a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navbar-list a:hover{
+            color: orangered;
+        }
+        .slider{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slides{
+            display: flex;
+            transform: tranform 1s ease;
+        }
+        .slide{
+            min-width: 100%;
+            height: 100%;
+
+        }
+        .slide img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @keyframes slideAnimation{
+            0% {transform: translateX(0);}
+            20% {transform: translateX(0);}
+            25% {transform: translateX(-100%);}
+            45% {transform: translateX(-100%);}
+            50% {transform: translateX(-200%);}
+            70% {transform: translateX(-200%);}
+            75% {transform: translateX(-300%);}
+            100% {transform: translateX(-300%);}
+        }
+        .slides{
+            animation: slideAnimation 12s infinite;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="home">home</a></li>
+            <li><a href="sobre">sobre</a></li>
+            <li><a href="servicos">servicos</a></li>
+            <li><a href="contato">contato</a></li>
+        </ul>
+    </nav>
+    <div class="slider">
+
+        <div class="slides">
+            <div class="slide">
+                <img src="images.png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images (1).png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="img.jpg" alt="">
+            </div>
+            
+        </div>
+        </div>
+            <div class="card">
+                <p class="heading">
+                Popular this month
+                </p>
+                <p>
+                Powered By
+                </p>
+                <p>Uiverse
+            </p>
+        </div>
+    
+    <footer>
+        2024 meu site personalizado | todos os direitos reservados
+    </footer>
+</body>
+</html>

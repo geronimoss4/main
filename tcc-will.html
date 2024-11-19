@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flastech Bike Part</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+            background-color: #000000; /* Fundo preto */
+        }
+
+        footer {
+            background: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) padding-box, 
+                linear-gradient(to right, #ff0000, #7b00ff) border-box;
+            border-radius: 15px;
+            border: 5px solid transparent;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        footer h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .btn-12 {
+            border-radius: 99rem;
+            border: 3px solid transparent;
+            padding: 1rem 3rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to right, #000, #000) padding-box, 
+                        linear-gradient(to right, #ff0000, #7b00ff) border-box;
+            color: #fdfcfc;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-12:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(123, 0, 255, 0.5);
+        }
+
+        .btn-12 span {
+            mix-blend-mode: difference;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        main {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        /* Linha animada */
+        .line-animation {
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ff0000, #7b00ff);
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .line-animation:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #7b00ff, #ff0000);
+            animation: slide 2s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Div para imagem com borda degradê */
+        .image-container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            border: 5px solid transparent;
+            border-radius: 15px;
+            background: linear-gradient(to right, #ff0000, #7b00ff) border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Importante para posicionar o GIF dentro da imagem */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <footer>
+            <img src="logo bike.jpg" alt="Logotipo Flastech Bike Part">
+            <h1>Flastech Bike Part</h1>
+        </footer>
+        <div class="button-container">
+            <a href="nossa-pag.html" class="btn-12"><span>sobre pg</span></a>
+            <a href="marcas.html" class="btn-12"><span>marcas bk</span></a>
+            <a href="vendas.html" class="btn-12"><span>vendas</span></a>
+            <a href="grupos.html" class="btn-12"><span>grupos</span></a>
+            <a href="contato.html" class="btn-12"><span>contato</span></a>
+        </div>
+        <div class="line-animation"></div>
+
+        <!-- Div com imagem e borda degradê -->
+        <div class="image-container">
+            <!-- GIF animado dentro da imagem -->
+            <img src="fundo.jpg" alt="Imagem de Bike">
+            
+        </div>
+    </main>
+</body>
+</html>
